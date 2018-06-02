@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start":
-      "npm run start:client & npm run start:server && node ./server/server.js",
+      "yarn run start:client & yarn run start:server && node ./server/server.js",
     "start:client": "NODE_ENV=development webpack-dev-server --hot",
     "start:server":
       "./server-init.sh && babel src/server/server.js -o server/server.js -s && babel src/server/modules --out-dir server/modules --source-maps",
     "build:client": "NODE_ENV=development webpack",
     "flow": "flow",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "start-storybook -p 9001 -c ./src/client/components/storybook"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
     "socket.io-client": "^2.0.4"
   },
   "devDependencies": {
+    "@storybook/react": "^3.4.5",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
@@ -82,5 +84,13 @@
   "lint-staged": {
     "*.{js,jsx}": ["eslint --fix", "git add"],
     "*.{css,json,md}": ["prettier --write", "git add"]
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./setupTests.js",
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+        "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
   }
 }

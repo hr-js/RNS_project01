@@ -1,5 +1,5 @@
-// flow-typed signature: 1eed102f1f3f03ab47e98615df15dfd3
-// flow-typed version: 51b71b47ea/socket.io-client_v2.x.x/flow_>=v0.34.x
+// flow-typed signature: 1e63a2aba31d0f62c5463646888a9ea4
+// flow-typed version: 64227b327e/socket.io-client_v2.x.x/flow_>=v0.34.x
 
 declare module "socket.io-client" {
   declare type Callback = (...args: any[]) => void;
@@ -51,6 +51,7 @@ declare module "socket.io-client" {
 
   declare export class Socket extends Emitter<Socket> {
     constructor(io: Manager, nsp: string, opts?: SocketOptions): Socket;
+    id: string;
     open(): Socket;
     connect(): Socket;
     send(...args: any[]): Socket;
