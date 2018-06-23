@@ -6,7 +6,7 @@
     "plugin:flowtype/recommended",
     "plugin:prettier/recommended"
   ],
-  "plugins": ["flowtype", "jest"],
+  "plugins": ["react", "flowtype", "jest"],
   "env": {
     "browser": true,
     "node": true,
