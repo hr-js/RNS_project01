@@ -1,0 +1,10 @@
+.menu {
+  position: absolute;
+  width: 170px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: whitesmoke;
+  box-shadow: 1px 0px 4px 0px silver;
+  z-index: 10;
+}
