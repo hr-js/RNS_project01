@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
+import MenuButton from "@components/atoms/MenuButton";
 import styles from "./style.css";
-import MenuButton from "../../atoms/MenuButton";
 
 type PropType = {
   current: string,

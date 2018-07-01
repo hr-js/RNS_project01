@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import { shallow } from "enzyme";
-import MenuButton from "../../../../../src/client/components/atoms/MenuButton";
+import MenuButton from "@components/atoms/MenuButton";
 
 describe("MenuButton.jsxのテスト", () => {
   const func = () => {};

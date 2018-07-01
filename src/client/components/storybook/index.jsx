@@ -3,9 +3,11 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 
 // actions
-import MenuButton from "../atoms/MenuButton";
+import MenuButton from "@components/atoms/MenuButton";
 // molecules
-import MenuList from "../molecules/MenuList";
+import MenuList from "@components/molecules/MenuList";
+// organisms
+import Menu from "@components/organisms/Menu";
 
 // #region atoms
 storiesOf("Atoms/MenuButton", module)
@@ -20,7 +22,7 @@ storiesOf("Atoms/MenuButton", module)
 // #endregion atoms
 
 // #region molecules
-storiesOf("Components/MenuList", module)
+storiesOf("Molecules/MenuList", module)
   .add("入退室処理 選択時", () => (
     <MenuList current="入退室処理" onButtonClick={action("clicked")} />
   ))
@@ -31,3 +33,9 @@ storiesOf("Components/MenuList", module)
     <MenuList current="利用者一覧" onButtonClick={action("clicked")} />
   ));
 // #endregion molecules
+
+// #region organisms
+storiesOf("Organisms/Menu", module).add("メニュー", () => (
+  <Menu current="入退室処理" onCuttonClick={action("clicked")} />
+));
+// #endreigon organisms

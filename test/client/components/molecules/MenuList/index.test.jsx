@@ -1,8 +1,8 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import { shallow, mount } from "enzyme";
-import MenuList from "../../../../../src/client/components/molecules/MenuList";
-import MenuButton from "../../../../../src/client/components/atoms/MenuButton";
+import MenuList from "@components/molecules/MenuList";
+import MenuButton from "@components/atoms/MenuButton";
 
 describe("MenuList.jsxのテスト", () => {
   const func = () => {};
