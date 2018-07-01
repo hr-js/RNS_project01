@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuList.jsxのテスト スナップショット renders corecctly 1`] = `
+<ul
+  className="menuList"
+>
+  <li>
+    <button
+      className="button selected"
+      onClick={[Function]}
+    >
+      入退室処理
+    </button>
+  </li>
+  <li>
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      ユーザ登録
+    </button>
+  </li>
+  <li>
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+      利用者一覧
+    </button>
+  </li>
+</ul>
+`;
