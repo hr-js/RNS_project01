@@ -4,6 +4,8 @@ import { action } from "@storybook/addon-actions";
 
 // actions
 import MenuButton from "@components/atoms/MenuButton";
+// molecules
+import MenuList from "@components/molecules/MenuList";
 
 // #region atoms
 storiesOf("Atoms/MenuButton", module)
@@ -16,3 +18,16 @@ storiesOf("Atoms/MenuButton", module)
     </MenuButton>
   ));
 // #endregion atoms
+
+// #region molecules
+storiesOf("Molecules/MenuList", module)
+  .add("入退室処理 選択時", () => (
+    <MenuList current="入退室処理" onButtonClick={action("clicked")} />
+  ))
+  .add("ユーザ登録 選択時", () => (
+    <MenuList current="ユーザ登録" onButtonClick={action("clicked")} />
+  ))
+  .add("利用者一覧 選択時", () => (
+    <MenuList current="利用者一覧" onButtonClick={action("clicked")} />
+  ));
+// #endregion molecules
