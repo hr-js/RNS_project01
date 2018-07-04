@@ -6,6 +6,8 @@ import { action } from "@storybook/addon-actions";
 import MenuButton from "@components/atoms/MenuButton";
 // molecules
 import MenuList from "@components/molecules/MenuList";
+// organisms
+import Menu from "@components/organisms/Menu";
 
 // #region atoms
 storiesOf("Atoms/MenuButton", module)
@@ -31,3 +33,9 @@ storiesOf("Molecules/MenuList", module)
     <MenuList current="利用者一覧" onButtonClick={action("clicked")} />
   ));
 // #endregion molecules
+
+// #region organisms
+storiesOf("Organisms/Menu", module).add("メニュー", () => (
+  <Menu current="入退室処理" onCuttonClick={action("clicked")} />
+));
+// #endreigon organisms
