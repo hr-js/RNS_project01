@@ -88,7 +88,9 @@
     "*.{css,json,md}": ["prettier --write", "git add"]
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "./setupTests.js",
     "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy",
       "@components(.*)$": "<rootDir>/src/client/components$1"
     }
   }

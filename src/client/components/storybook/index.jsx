@@ -1,6 +1,18 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import App from "@components/App";
+import { action } from "@storybook/addon-actions";
 
-// TODO: テスト実装のため、component作成時にこの例は削除する
-storiesOf("App", module).add("App.jsx", () => <App />);
+// actions
+import MenuButton from "@components/atoms/MenuButton";
+
+// #region atoms
+storiesOf("Atoms/MenuButton", module)
+  .add("通常", () => (
+    <MenuButton onButtonClick={action("clicked")}>メニュー</MenuButton>
+  ))
+  .add("選択時", () => (
+    <MenuButton selected="selected" onButtonClick={action("clicked")}>
+      メニュー
+    </MenuButton>
+  ));
+// #endregion atoms
