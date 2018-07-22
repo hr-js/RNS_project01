@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mascot.jsxのテスト スナップショット 正しいレンダリング 1`] = `
+<div
+  className="mascot"
+>
+  <img
+    alt="マスコット"
+    className="img"
+    src="test-file-stub"
+  />
+</div>
+`;
